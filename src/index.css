@@ -11,3 +11,77 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.hangul-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 10px 0 10px;
+}
+
+.hangul-header {
+  font-size: 2rem;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.hangul-cards {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.hangul-card {
+  margin: 10px;
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  background-color: #fffacd; /* пастельно желтый цвет */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.card-front,
+.card-back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  font-weight: bold;
+  color: #333; /* контрастный цвет текста */
+  height: 100%;
+}
+.card-back{
+  font-size: 36px;
+}
+.react-card-flip {
+  height: 100%;
+}
+
+.hangul-nav {
+  display: flex;
+  margin-top: 1.5rem;
+}
+
+button.hangul-prev, button.hangul-next {
+  background-color: #ffd966; /* пастельно-желтый цвет */
+  color: #333; /* контрастный цвет текста */
+  border: none; /* убираем границы */
+  padding: 10px 20px; /* задаем отступы */
+  font-size: 16px; /* задаем размер текста */
+  border-radius: 5px; /* скругляем углы */
+  cursor: pointer; /* добавляем курсор-указатель при наведении */
+}
+
+button.hangul-next {
+  margin-left: 10px; /* добавляем отступ между кнопками */
+}
+
+.hangul-prev:hover,
+.hangul-next:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
