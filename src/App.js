@@ -50,6 +50,10 @@ const HangulCards = () => {
     }
   };
 
+  React.useEffect(() => {
+    setIsFlipped(false);
+  }, []);
+
   return (
     <div className="hangul-container">
       <h1 className="hangul-header">Изучение корейского алфавита</h1>
@@ -59,11 +63,7 @@ const HangulCards = () => {
             <div className="card-front" onClick={handleClick}>
               {cards[currentIndex].front}
             </div>
-            <div
-              className="card-back"
-              onClick={handleClick}
-              style={{ visibility: isFlipped ? "visible" : "hidden" }}
-            >
+            <div className="card-back" onClick={handleClick}>
               {cards[currentIndex].back}
             </div>
           </CardFlip>
